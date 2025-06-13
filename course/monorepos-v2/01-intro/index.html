@@ -55,7 +55,7 @@
 <li>
 <p><a href="#project-setup">Project setup</a></p>
 <ul>
-<li><a href="#1-make-sure-you-have-pnpm-installed">1. Make sure you have <code>pnpm</code> installed.</a></li>
+<li><a href="#1-make-sure-you-have-pnpm-installed">1. Make sure you have <code>pnpm</code> installed</a></li>
 <li><a href="#2-check-out-the-git-repo">2. Check out the git repo</a></li>
 <li><a href="#3-install-dependencies">3. Install dependencies</a></li>
 <li><a href="#4-test-whether-basic-tasks-work">4. Test whether basic tasks work</a></li>
@@ -103,7 +103,7 @@
 <li>Monorepo dependencies automatically linked</li>
 <li>Parallized dependency-aware task execution for build, linting and testing</li>
 <li>Commands for CI that run tests on <em>only the code affected by the change</em></li>
-<li>Support for <em>some</em> packages in the monorepo being more coupled with each other than others, by design (e.g. using <em>private</em> functionality) </li>
+<li>Support for <em>some</em> packages in the monorepo being more coupled with each other than others, by design (e.g. using <em>private</em> functionality)</li>
 <li>Automatic code documentation</li>
 </ul>
 <p>We’re going to be using some of the latest and greatest tooling, including</p>
@@ -120,9 +120,9 @@
 <li>…and more!!!</li>
 </ul>
 <h2 id="project-setup" style="position:relative;"><a href="#project-setup" aria-label="project setup permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project setup</h2>
-<h3 id="1-make-sure-you-have-pnpm-installed" style="position:relative;"><a href="#1-make-sure-you-have-pnpm-installed" aria-label="1 make sure you have pnpm installed permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Make sure you have <a href="https://pnpm.io/"><code>pnpm</code></a> installed.</h3>
+<h3 id="1-make-sure-you-have-pnpm-installed" style="position:relative;"><a href="#1-make-sure-you-have-pnpm-installed" aria-label="1 make sure you have pnpm installed permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Make sure you have <a href="https://pnpm.io/"><code>pnpm</code></a> installed</h3>
 <p>If you don’t using <code>volta</code> (get it at <a href="https://volta.sh">https://volta.sh</a>) is a great way to obtain it.</p>
-<p>First, install volta </p>
+<p>First, install volta</p>
 <pre class="shiki github-light" style="background-color: #ffffff; color: #24292f"><div class="language-id">sh</div><div class='code-container'><code><div class='line'><span style="color: #24292F">curl https://get.volta.sh </span><span style="color: #CF222E">|</span><span style="color: #24292F"> bash</span></div></code></div></pre>
 <p>You may need to close and reopen your terminal before your can verify that your environment has volta installed</p>
 <pre class="shiki github-light" style="background-color: #ffffff; color: #24292f"><div class="language-id">sh</div><div class='code-container'><code><div class='line'><span style="color: #24292F">volta --version</span></div><div class='line'><span style="color: #CF222E">&gt;</span><span style="color: #24292F"> 2.0.2 </span></div></code></div></pre>
