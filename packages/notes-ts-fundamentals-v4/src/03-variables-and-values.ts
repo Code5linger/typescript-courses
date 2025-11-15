@@ -1,8 +1,10 @@
 //* Variable Declarations & Inference
 let temperature = 6 //! inference
-/*
-// temperature = "warm"  //! type-checking
-// const humidity = 79  //! literal type
+console.log(temperature)
+
+// temperature = 'warm' //! type-checking
+const humidity = 79 //! literal type
+console.log(humidity)
 
 //* A type as a set of allowed values
 /*
